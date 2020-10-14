@@ -1,0 +1,14 @@
+﻿@model List<Lab2.Models.MyFile>;
+
+@{
+    ViewData["Title"] = "Home Page - Files";
+}
+
+<ul>
+@foreach(var item in @Model)
+{
+    <li>
+        <a asp-controller="Files" asp-action="Content" asp-route-id="@item.FileName">@item.FileName</a>
+    </li>
+}
+</ul>
